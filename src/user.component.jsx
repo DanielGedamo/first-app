@@ -40,7 +40,7 @@ class User extends Component {
   seandToTable(e) {
     e.preventDefault()
     return(
-      document.getElementById("myTable").innerHTML = `<table><thead>
+      document.getElementById("myTable").innerHTML += `<table><thead>
       <th>first name</th> 
       <th>last name</th>
        <th>age</th>
@@ -65,7 +65,6 @@ class User extends Component {
         {this.props.admin ? (
           <button onClick={this.changeName}>Click to change</button>
         ) : null}
-        {/* <h1>{this.state.Fname}</h1> */}
         <form>
           <label>first name</label>
           <input
@@ -73,17 +72,12 @@ class User extends Component {
           <br></br>
           <label>Least name</label>
           <input type="text" value={this.state.Lname}onChange={(e) => {this.getValueOfLname(e);}} />
-          {/* <p>{this.state.Lname}</p> */}
           <label>Age</label>
           <input type="text" value={this.state.age} onChange={(e) => this.getAge(e)}/>
-          {/* <p>{this.state.age}</p> */}
           <br></br>
           <label>Password</label>
-          {/* <p>{this.state.password}</p> */}
           <input type="text" value={this.state.password} onChange={(e)=>this.getPassword(e)} /><br></br>
           <label htmlFor="">E-mail</label>
-          {/* <p>{this.state.email}</p> */}
-
           <input type="text" value={this.state.email} onChange={(e)=>this.getEmail(e)} />
           <button onClick={this.seandToTable}>seand</button>
         </form>
