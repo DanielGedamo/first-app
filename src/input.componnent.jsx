@@ -14,7 +14,7 @@ class MyInpunt extends Component {
     return (
       <div>
         <p>{this.state.name}</p>
-        <input value={this.state.name}onChange={(e)=>this.getValue(e)} />
+        <input value={this.state.name}onChange={(e)=> {this.getValue(e)}} />
       </div>
     );
   }
